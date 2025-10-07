@@ -262,7 +262,7 @@ export default function FotoWazaHome() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="bg-white text-[#0B0B0B] rounded-2xl p-6 shadow space-y-4">
+          <form action="https://formspree.io/f/mwkjanlb" method="POST" className="bg-white ...">
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
                 <label className="text-sm font-medium">Imię i nazwisko</label>
