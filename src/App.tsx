@@ -395,17 +395,19 @@ export default function FotoWazaHome() {
         </div>
       </section>
 
-     {/* MAPA GOOGLE */}
+{/* MAPA GOOGLE – dwa pewne pin-y */}
 <section id="mapa" className="bg-neutral-100 py-10 border-t">
   <div className="max-w-6xl mx-auto px-4">
     <h2 className="text-2xl font-bold text-center mb-6">Znajdź nas na mapie</h2>
     <div className="grid md:grid-cols-2 gap-6">
-      
-      {/* SIEDZIBA GŁÓWNA */}
+      {/* Siedziba główna */}
       <div className="rounded-2xl overflow-hidden shadow">
         <iframe
           title="Siedziba główna FotoWaza"
-          src="https://www.google.com/maps?q=Foto+Waza,+Słowiańska+63,+64-100+Leszno&output=embed"
+          // UWAGA: świadomie używamy q= z nazwą + adresem, żeby wymusić czerwony pin
+          src={"https://www.google.com/maps?q=" +
+            encodeURIComponent("Foto Waza, ul. Słowiańska 63, 64-100 Leszno") +
+            "&output=embed"}
           width="100%"
           height="320"
           style={{ border: 0 }}
@@ -418,11 +420,13 @@ export default function FotoWazaHome() {
         </div>
       </div>
 
-      {/* ODDZIAŁ – CH MANHATTAN */}
+      {/* Oddział – CH Manhattan */}
       <div className="rounded-2xl overflow-hidden shadow">
         <iframe
           title="Oddział CH Manhattan FotoWaza"
-          src="https://www.google.com/maps?q=Foto+Waza,+CH+Manhattan,+Aleja+Jana+Pawła+II+16,+Leszno&output=embed"
+          src={"https://www.google.com/maps?q=" +
+            encodeURIComponent("CH Manhattan, Aleja Jana Pawła II 16, 64-100 Leszno") +
+            "&output=embed"}
           width="100%"
           height="320"
           style={{ border: 0 }}
@@ -434,7 +438,6 @@ export default function FotoWazaHome() {
           <strong>Oddział CH Manhattan:</strong> Aleja Jana Pawła II 16, 64-100 Leszno
         </div>
       </div>
-
     </div>
   </div>
 </section>
