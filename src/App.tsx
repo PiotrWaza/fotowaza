@@ -395,6 +395,48 @@ export default function FotoWazaHome() {
         </div>
       </section>
 
+      {/* MAPA GOOGLE */}
+<section id="mapa" className="bg-neutral-100 py-10 border-t">
+  <div className="max-w-6xl mx-auto px-4">
+    <h2 className="text-2xl font-bold text-center mb-6">Znajdź nas na mapie</h2>
+    <div className="grid md:grid-cols-2 gap-6">
+      {/* Siedziba główna */}
+      <div className="rounded-2xl overflow-hidden shadow">
+        <iframe
+          title="Siedziba główna FotoWaza"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2453.053972774254!2d16.574844477067502!3d51.841177371891796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47053e416f93b7b5%3A0x6f8bfe84e8e219e7!2sFoto%20Waza!5e0!3m2!1spl!2spl!4v1730926551000!5m2!1spl!2spl"
+          width="100%"
+          height="300"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <div className="bg-white p-4 text-sm text-center">
+          <strong>Siedziba główna:</strong> ul. Słowiańska 63, Leszno
+        </div>
+      </div>
+
+      {/* Oddział */}
+      <div className="rounded-2xl overflow-hidden shadow">
+        <iframe
+          title="Oddział CH Manhattan"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2452.7149023269557!2d16.586406177067763!3d51.84759047189257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47053e4ac267174f%3A0x3f6d4f09e3c5c3b4!2sCH%20Manhattan%20Leszno!5e0!3m2!1spl!2spl!4v1730926658000!5m2!1spl!2spl"
+          width="100%"
+          height="300"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <div className="bg-white p-4 text-sm text-center">
+          <strong>Oddział CH Manhattan:</strong> Aleja Jana Pawła II 16, Leszno
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
       {/* STOPKA */}
       <footer className="border-t">
         <div className="max-w-6xl mx-auto px-4 py-8 text-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
