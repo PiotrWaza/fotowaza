@@ -29,50 +29,113 @@ export default function FotoWazaHome() {
 
   // ROUTING: podstrona polityki prywatności (statyczny tekst)
   if (route.startsWith('#/polityka-prywatnosci')) {
-    return (
-      <div className="min-h-screen bg-white text-[#0B0B0B]">
-        <header className="sticky top-0 z-40 border-b bg-white">
-          <nav className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <img src={LOGO_DATA_URI} alt="FotoWaza logo" className="h-8 w-auto"/>
-              <span className="font-semibold">FotoWaza</span>
-            </div>
-            <a href="#/" className="text-sm text-[#0E4C9A] hover:underline">← Wróć na stronę główną</a>
-          </nav>
-        </header>
-
-        <main className="max-w-3xl mx-auto px-4 py-10 space-y-6">
-          <h1 className="text-3xl font-bold">Polityka prywatności</h1>
-          <p className="text-neutral-600">Niniejsza polityka prywatności opisuje zasady przetwarzania danych osobowych przez FotoWaza, zgodnie z obowiązującymi przepisami prawa.</p>
-          <h2 className="text-xl font-semibold mt-6">1. Administrator danych</h2>
-          <p>Administratorem danych osobowych jest FotoWaza z siedzibą w Lesznie przy ul. Słowiańskiej 63.</p>
-          <h2 className="text-xl font-semibold mt-6">2. Zakres zbieranych danych</h2>
-          <p>Przetwarzamy dane osobowe podane dobrowolnie przez użytkowników podczas korzystania z formularzy kontaktowych, składania zamówień online oraz podczas kontaktu telefonicznego lub e-mailowego.</p>
-          <h2 className="text-xl font-semibold mt-6">3. Cel przetwarzania danych</h2>
-          <ul className="list-disc list-inside space-y-1">
-            <li>realizacja usług fotograficznych i zamówień online,</li>
-            <li>udzielanie odpowiedzi na zapytania klientów,</li>
-            <li>informowanie o ofercie i nowościach (wyłącznie za zgodą użytkownika).</li>
-          </ul>
-          <h2 className="text-xl font-semibold mt-6">4. Udostępnianie danych</h2>
-          <p>Dane osobowe nie są udostępniane podmiotom trzecim, z wyjątkiem przypadków przewidzianych przepisami prawa.</p>
-          <h2 className="text-xl font-semibold mt-6">5. Prawa użytkownika</h2>
-          <p>Każdemu użytkownikowi przysługuje prawo do wglądu w swoje dane, ich poprawiania, usunięcia lub ograniczenia przetwarzania, a także prawo do sprzeciwu i prawo do przenoszenia danych.</p>
-          <h2 className="text-xl font-semibold mt-6">6. Okres przechowywania danych</h2>
-          <p>Dane osobowe są przechowywane przez okres niezbędny do realizacji usług oraz przez czas wymagany przepisami prawa.</p>
-          <h2 className="text-xl font-semibold mt-6">7. Kontakt</h2>
-          <p>W sprawach związanych z ochroną danych osobowych można kontaktować się z nami pod adresem e-mail: info@fotowaza.pl.</p>
-        </main>
-
-        <footer className="border-t">
-          <div className="max-w-6xl mx-auto px-4 py-6 text-sm text-neutral-600 flex items-center justify-between">
-            <p>© {new Date().getFullYear()} FotoWaza. Wszelkie prawa zastrzeżone.</p>
-            <a href="#/polityka-prywatnosci" className="text-[#0E4C9A] hover:underline">Polityka prywatności</a>
+  return (
+    <div className="min-h-screen bg-white text-[#0B0B0B]">
+      <header className="sticky top-0 z-40 border-b bg-white">
+        <nav className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <img src={LOGO_DATA_URI} alt="FotoWaza logo" className="h-8 w-auto"/>
+            <span className="font-semibold">FotoWaza</span>
           </div>
-        </footer>
-      </div>
-    );
-  }
+          <a href="#/" className="text-sm text-[#0E4C9A] hover:underline">← Wróć na stronę główną</a>
+        </nav>
+      </header>
+
+      <main className="max-w-4xl mx-auto px-4 py-10 space-y-6 leading-relaxed text-neutral-800">
+        <h1 className="text-3xl font-bold text-center mb-6">Polityka prywatności</h1>
+
+        <h2 className="text-2xl font-semibold mt-8">Informacje ogólne</h2>
+        <p>
+          Niniejszy dokument zawiera oświadczenie dotyczące ochrony danych osobowych w sklepie <strong>fotowaza.pl</strong>.
+        </p>
+        <p>
+          Stanowi on świadectwo dbałości o prywatność Klientów sklepu prowadzonego przez <strong>Foto Waza Sp. C.</strong> (dalej: <em>Sklep</em>).
+        </p>
+        <ul className="list-disc list-inside space-y-1">
+          <li><strong>Ustawa</strong> – Ustawa z dnia 29 sierpnia 1997 roku o ochronie danych osobowych (Dz.U. 2002 Nr 101, poz. 926 z późn. zm.).</li>
+          <li><strong>Rozporządzenie</strong> – Rozporządzenie (UE) 2016/679 Parlamentu Europejskiego i Rady (RODO).</li>
+          <li><strong>Firma współpracująca</strong> – podmiot zapewniający szczególne usługi niezbędne do realizacji transakcji (np. płatności online, obsługa kurierska).</li>
+          <li><strong>Sklep</strong> – platforma internetowa Foto Waza Sp. C. umożliwiająca zamawianie towarów i usług.</li>
+          <li><strong>Klient Nowy</strong> – osoba rejestrująca się po raz pierwszy i przekazująca dane poprzez formularz.</li>
+          <li><strong>Klient Zarejestrowany</strong> – osoba korzystająca ponownie z konta w Sklepie.</li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold mt-8">Zasady zbierania i przetwarzania danych</h2>
+        <ol className="list-decimal list-inside space-y-1">
+          <li>Podstawą przetwarzania danych osobowych jest <strong>zgoda Klienta</strong> oraz przepisy Ustawy i Rozporządzenia.</li>
+          <li>Podanie danych osobowych jest <strong>dobrowolne</strong>, lecz konieczne do realizacji usług.</li>
+          <li>Klienci mogą przeglądać Sklep bez rejestracji.</li>
+          <li>Dane są przetwarzane i zabezpieczane zgodnie z obowiązującymi przepisami prawa.</li>
+          <li>Dane osobowe wykorzystywane są do celów księgowych, kontaktu i realizacji zamówień.</li>
+          <li>W razie potrzeby dane mogą być przekazywane do <strong>firm współpracujących</strong> w celu realizacji zamówienia.</li>
+          <li>Podczas rejestracji Klient podaje m.in. imię, nazwisko, e-mail, adres i numer telefonu.</li>
+          <li>Przedsiębiorcy dodatkowo podają nazwę firmy i NIP.</li>
+          <li>Dane Klienta Zarejestrowanego są przechowywane przez okres aktywności konta.</li>
+          <li>Dane Klienta Nowego – do zakończenia transakcji i okresu gwarancji.</li>
+          <li>Dane nie są udostępniane stronom trzecim, chyba że wynika to z przepisów prawa.</li>
+          <li>Sklep stosuje pliki <strong>„cookies”</strong> w celach statystycznych i personalizacyjnych (patrz: Informacja o Cookies na fotowaza.pl).</li>
+        </ol>
+
+        <h2 className="text-2xl font-semibold mt-8">Ochrona prywatności osób niepełnoletnich</h2>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Klientami Sklepu mogą być wyłącznie <strong>osoby pełnoletnie</strong>.</li>
+          <li>Sklep nie weryfikuje wieku klientów ani nie ponosi odpowiedzialności za działania osób niepełnoletnich.</li>
+          <li>Odpowiedzialność prawną za działania osób niepełnoletnich ponoszą ich <strong>opiekunowie prawni</strong>.</li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold mt-8">Zabezpieczenia</h2>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Sklep stosuje środki bezpieczeństwa chroniące dane przed utratą, niewłaściwym wykorzystaniem i modyfikacją.</li>
+          <li>Foto Waza Sp. C. posiada dokumentację i procedury ochrony danych osobowych.</li>
+          <li>Partnerzy firmy zobowiązani są do zachowania wysokich standardów bezpieczeństwa.</li>
+          <li>Klient powinien zadbać o bezpieczeństwo swojego komputera, zwłaszcza ze względu na publiczny charakter sieci Internet.</li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold mt-8">Rezygnacja i poprawa danych</h2>
+        <p>
+          Foto Waza Sp. C. zapewnia realizację praw Klientów wynikających z RODO, w tym:
+        </p>
+        <ul className="list-disc list-inside space-y-1">
+          <li><strong>dostępu</strong> do własnych danych,</li>
+          <li><strong>poprawiania</strong> i <strong>sprostowania</strong> danych,</li>
+          <li><strong>usunięcia</strong> lub <strong>ograniczenia przetwarzania</strong>,</li>
+          <li><strong>sprzeciwu</strong> wobec przetwarzania danych,</li>
+          <li>zgłoszenia skargi do organu nadzorczego.</li>
+        </ul>
+        <p>
+          Klient może żądać usunięcia swoich danych drogą listowną, wysyłając żądanie na adres:
+          <br/>
+          <strong>Foto Waza Sp. C., ul. Słowiańska 63, 64-100 Leszno</strong>.
+        </p>
+        <p>
+          Usunięcie konta Klienta jest równoznaczne z usunięciem jego danych osobowych.  
+          Jeśli w momencie żądania realizowana jest usługa – usunięcie nastąpi po jej zakończeniu.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-8">Zmiany Polityki Prywatności</h2>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Foto Waza Sp. C. zastrzega sobie prawo do zmiany Polityki Prywatności.</li>
+          <li>O wszelkich zmianach Klienci Zarejestrowani zostaną poinformowani drogą mailową przed wejściem zmian w życie.</li>
+          <li>Pozostanie konta po wprowadzeniu zmian oznacza <strong>akceptację nowej Polityki</strong>.</li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold mt-8">Kontakt</h2>
+        <p>
+          W razie pytań dotyczących niniejszej Polityki Prywatności prosimy o kontakt:
+          <br/>
+          <strong>info@fotowaza.pl</strong>
+        </p>
+      </main>
+
+      <footer className="border-t">
+        <div className="max-w-6xl mx-auto px-4 py-6 text-sm text-neutral-600 flex items-center justify-between">
+          <p>© {new Date().getFullYear()} FotoWaza. Wszelkie prawa zastrzeżone.</p>
+          <a href="#/polityka-prywatnosci" className="text-[#0E4C9A] hover:underline">Polityka prywatności</a>
+        </div>
+      </footer>
+    </div>
+  );
+}
 
   return (
     <div className="min-h-screen bg-white text-[#0B0B0B]">
