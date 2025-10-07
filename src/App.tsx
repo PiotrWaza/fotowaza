@@ -105,7 +105,7 @@ export default function FotoWazaHome() {
           <div className="px-4 pb-4 pt-0 max-w-6xl mx-auto text-white">
             <ul className="flex flex-col gap-2 text-sm">
               <li><a onClick={() => setMobileOpen(false)} href="#oferta" className="block px-3 py-2 rounded-lg hover:bg-white/10">Oferta</a></li>
-              <li><a onClick={() => setMobileOpen(false)} href="#portfolio" className="block px-3 py-2 rounded-lg hover:bg:white/10">Portfolio</a></li>
+              <li><a onClick={() => setMobileOpen(false)} href="#portfolio" className="block px-3 py-2 rounded-lg hover:bg-white/10">Portfolio</a></li>
               <li><a onClick={() => setMobileOpen(false)} href="#o-nas" className="block px-3 py-2 rounded-lg hover:bg-white/10">O nas</a></li>
               <li><a onClick={() => setMobileOpen(false)} href="#zamowienia" className="block px-3 py-2 rounded-lg hover:bg-white/10">Wywołaj zdjęcia</a></li>
               <li><a onClick={() => setMobileOpen(false)} href="#kontakt" className="block px-3 py-2 rounded-lg hover:bg-white/10">Kontakt</a></li>
