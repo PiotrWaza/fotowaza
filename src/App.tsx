@@ -263,7 +263,7 @@ export default function FotoWazaHome() {
           </div>
 
 <form
-  action="https://formspree.io/f/mwkjanlb"
+  action="https://formspree.io/f/movknvdy"
   method="POST"
   className="bg-white text-[#0B0B0B] rounded-2xl p-6 shadow space-y-4"
 >
