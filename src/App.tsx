@@ -262,44 +262,73 @@ export default function FotoWazaHome() {
             </div>
           </div>
 
-          <form action="https://formspree.io/f/mwkjanlb" method="POST" className="bg-white ...">
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label className="text-sm font-medium">Imię i nazwisko</label>
-                <input required name="name" value={form.name} onChange={handleChange} className="w-full mt-1 rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-[#0E4C9A]"/>
-              </div>
-              <div>
-                <label className="text-sm font-medium">E‑mail</label>
-                <input required type="email" name="email" value={form.email} onChange={handleChange} className="w-full mt-1 rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-[#0E4C9A]"/>
-              </div>
-            </div>
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label className="text-sm font-medium">Telefon</label>
-                <input name="phone" value={form.phone} onChange={handleChange} className="w-full mt-1 rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-[#0E4C9A]"/>
-              </div>
-              <div>
-                <label className="text-sm font-medium">Usługa</label>
-                <select className="w-full mt-1 rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-[#0E4C9A]">
-                  <option>Fotografia ślubna</option>
-                  <option>Fotografia rodzinna</option>
-                  <option>Event / Reportaż</option>
-                  <option>Filmowanie</option>
-                  <option>Fotobudka</option>
-                </select>
-              </div>
-            </div>
-            <div>
-              <label className="text-sm font-medium">Wiadomość</label>
-              <textarea required name="message" value={form.message} onChange={handleChange} rows={4} className="w-full mt-1 rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-[#0E4C9A]"></textarea>
-            </div>
-            <button type="submit" className="inline-flex items-center gap-2 bg-[#FFD400] text-[#0B0B0B] px-5 py-3 rounded-xl font-semibold">
-              Wyślij <Send className="h-4 w-4"/>
-            </button>
-            {sent && (
-              <p className="text-sm text-green-600">Dziękujemy! Formularz demonstracyjny – skonfigurujemy później wysyłkę na e‑mail.</p>
-            )}
-          </form>
+<form
+  action="https://formspree.io/f/mwkjanlb"
+  method="POST"
+  className="bg-white text-[#0B0B0B] rounded-2xl p-6 shadow space-y-4"
+>
+  <div className="grid sm:grid-cols-2 gap-4">
+    <div>
+      <label className="text-sm font-medium">Imię i nazwisko</label>
+      <input
+        required
+        name="name"
+        type="text"
+        className="w-full mt-1 rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-[#0E4C9A]"
+      />
+    </div>
+    <div>
+      <label className="text-sm font-medium">E-mail</label>
+      <input
+        required
+        type="email"
+        name="email"
+        className="w-full mt-1 rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-[#0E4C9A]"
+      />
+    </div>
+  </div>
+
+  <div className="grid sm:grid-cols-2 gap-4">
+    <div>
+      <label className="text-sm font-medium">Telefon</label>
+      <input
+        name="phone"
+        type="tel"
+        className="w-full mt-1 rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-[#0E4C9A]"
+      />
+    </div>
+    <div>
+      <label className="text-sm font-medium">Usługa</label>
+      <select
+        name="service"
+        className="w-full mt-1 rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-[#0E4C9A]"
+      >
+        <option>Fotografia ślubna</option>
+        <option>Fotografia rodzinna</option>
+        <option>Event / Reportaż</option>
+        <option>Filmowanie</option>
+        <option>Fotobudka</option>
+      </select>
+    </div>
+  </div>
+
+  <div>
+    <label className="text-sm font-medium">Wiadomość</label>
+    <textarea
+      required
+      name="message"
+      rows={4}
+      className="w-full mt-1 rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-[#0E4C9A]"
+    ></textarea>
+  </div>
+
+  <button
+    type="submit"
+    className="inline-flex items-center gap-2 bg-[#FFD400] text-[#0B0B0B] px-5 py-3 rounded-xl font-semibold hover:opacity-90 transition"
+  >
+    Wyślij
+  </button>
+</form>
         </div>
       </section>
 
