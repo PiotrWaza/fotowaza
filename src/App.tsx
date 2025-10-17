@@ -134,7 +134,7 @@ export default function FotoWazaHome() {
 
       <footer className="border-t">
         <div className="max-w-6xl mx-auto px-4 py-6 text-sm text-neutral-600 flex items-center justify-between">
-          <p>© {new Date().getFullYear()} FotoWaza. Wszelkie prawa zastrzeżone.</p>
+          <p>© {new Date().getFullYear()} Foto Waza. Wszelkie prawa zastrzeżone.</p>
           <a href="#/polityka-prywatnosci" className="text-[#0E4C9A] hover:underline">Polityka prywatności</a>
         </div>
       </footer>
@@ -244,7 +244,7 @@ export default function FotoWazaHome() {
   <div className="max-w-6xl mx-auto px-4">
     <h2 className="text-3xl font-bold">Portfolio</h2>
     <p className="mt-2 text-neutral-600 max-w-2xl">
-      Wybrane realizacje – pełne reportaże dostępne na życzenie.
+      Wybrane realizacje – pełne reportaże dostępne na życzenie (kliknij aby powiększyć).
     </p>
 
     {/* Galeria zdjęć */}
@@ -272,7 +272,7 @@ export default function FotoWazaHome() {
             <div className="mt-4 text-neutral-700 leading-relaxed space-y-5">
               <p className="flex items-start gap-3 leading-normal">
                 <span className="shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-lg bg-[#0E4C9A]/10 text-[#0E4C9A]"><Camera className="h-4 w-4"/></span>
-                <span><strong>FotoWaza</strong> to <strong>wiodąca firma fotograficzna</strong> z <strong>ponad 20‑letnim doświadczeniem</strong>. Tradycja i pasja do fotografii przekładają się na <strong>stałą, wysoką jakość</strong> i uznanie klientów.</span>
+                <span><strong>Foto Waza</strong> to <strong>wiodąca firma fotograficzna</strong> z <strong>ponad 20‑letnim doświadczeniem</strong>. Tradycja i pasja do fotografii przekładają się na <strong>stałą, wysoką jakość</strong> i uznanie klientów.</span>
               </p>
               <p className="flex items-start gap-3 leading-normal">
                 <span className="shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-lg bg-[#FFD400]/20 text-[#0B0B0B]"><Sparkles className="h-4 w-4"/></span>
@@ -318,7 +318,7 @@ export default function FotoWazaHome() {
             <p className="mb-6 text-neutral-200">Masz pytania? Zadzwoń lub napisz do nas – jesteśmy do Twojej dyspozycji.</p>
 
             <div className="mt-6 space-y-2 text-sm">
-              <h3 className="text-lg font-semibold text-[#FFD400]">Siedziba główna</h3>
+              <h3 className="text-lg font-semibold text-[#FFD400]">Siedziba główna Sp.C. WAZA A.H. Zygmanowscy</h3>
               <p className="flex items-start gap-2"><MapPin className="h-4 w-4 text-[#FFD400] mt-0.5"/> ul. Słowiańska 63, 64-100 Leszno</p>
               <p className="flex items-center gap-2"><Phone className="h-4 w-4 text-[#FFD400]"/> +48 65 529 74 74</p>
               <p className="flex items-center gap-2"><Clock className="h-4 w-4 text-[#FFD400]"/> pn–pt: 9:00 – 17:00</p>
@@ -416,7 +416,7 @@ export default function FotoWazaHome() {
       {/* Siedziba główna */}
       <div className="rounded-2xl overflow-hidden shadow">
         <iframe
-          title="Siedziba główna FotoWaza"
+          title="Siedziba główna Foto Waza"
           // UWAGA: świadomie używamy q= z nazwą + adresem, żeby wymusić czerwony pin
           src={"https://www.google.com/maps?q=" +
             encodeURIComponent("Foto Waza, ul. Słowiańska 63, 64-100 Leszno") +
@@ -436,7 +436,7 @@ export default function FotoWazaHome() {
       {/* Oddział – CH Manhattan */}
       <div className="rounded-2xl overflow-hidden shadow">
         <iframe
-          title="Oddział CH Manhattan FotoWaza"
+          title="Oddział CH Manhattan Foto Waza"
           src={"https://www.google.com/maps?q=" +
             encodeURIComponent("CH Manhattan, Aleja Jana Pawła II 16, 64-100 Leszno") +
             "&output=embed"}
@@ -467,7 +467,7 @@ export default function FotoWazaHome() {
   decoding="async"
 />
           </div>
-          <p className="text-neutral-600">© {new Date().getFullYear()} FotoWaza. Wszelkie prawa zastrzeżone.</p>
+          <p className="text-neutral-600">© {new Date().getFullYear()} Sp. C. WAZA A.H. Zygmanowscy. Wszelkie prawa zastrzeżone.</p>
           <a href="#/polityka-prywatnosci" className="text-[#0E4C9A] hover:underline">Polityka prywatności</a>
         </div>
       </footer>
