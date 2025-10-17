@@ -240,26 +240,41 @@ export default function FotoWazaHome() {
       </section>
 
       {/* PORTFOLIO */}
-      <section id="portfolio" className="py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold">Portfolio</h2>
-          <p className="mt-2 text-neutral-600 max-w-2xl">Wybrane realizacje – pełne reportaże dostępne na życzenie.</p>
-          <div className="grid md:grid-cols-3 gap-4 mt-8">
-            {[
-              "https://images.pexels.com/photos/265783/pexels-photo-265783.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "https://images.pexels.com/photos/377058/pexels-photo-377058.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "https://images.pexels.com/photos/347139/pexels-photo-347139.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "https://images.pexels.com/photos/167446/pexels-photo-167446.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "https://images.pexels.com/photos/274973/pexels-photo-274973.jpeg?auto=compress&cs=tinysrgb&w=800"
-            ].map((src, i) => (
-              <div key={i} className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-100">
-                <img src={src} alt={`Portfolio ${i+1}`} className="w-full h-full object-cover hover:scale-105 transition"/>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+     <section id="portfolio" className="py-16">
+  <div className="max-w-6xl mx-auto px-4">
+    <h2 className="text-3xl font-bold">Portfolio</h2>
+    <p className="mt-2 text-neutral-600 max-w-2xl">
+      Wybrane realizacje – pełne reportaże dostępne na życzenie.
+    </p>
+
+    {/* Konfiguracja galerii */}
+    {/* Umieść pliki w: public/portfolio/01.jpg ... */}
+    {/* import.meta.env.BASE_URL zapewnia poprawne ścieżki na GitHub Pages */}
+    {(() => {
+      const base = import.meta.env.BASE_URL || '/';
+      const images = [
+        'portfolio/01.jpg',
+        'portfolio/02.jpg',
+        'portfolio/03.jpg',
+        'portfolio/04.jpg',
+        'portfolio/05.jpg',
+        'portfolio/06.jpg',
+        'portfolio/07.jpg',
+        'portfolio/08.jpg',
+        'portfolio/09.jpg',     
+      ].map((p) => base + p);
+
+      // hooki i logika lightboxa:
+      // (musisz mieć na górze pliku: import { useState, useEffect } from 'react'; już masz)
+      // Dla czytelności używamy tu IIFE, ale hooki muszą być na top-level komponentu.
+      // Więc PRZENIEŚ poniższe 2 useState + 2 useEffect WYŻEJ w komponencie,
+      // tu tylko zostawiamy JSX. Poniżej masz docelowe linie do dodania na górze.
+      return (
+        <GalleryGrid images={images} />
+      );
+    })()}
+  </div>
+</section>
 
       {/* O NAS */}
       <section id="o-nas" className="bg-neutral-50 py-16">
@@ -471,3 +486,101 @@ export default function FotoWazaHome() {
     </div>
   );
 }
+
+function GalleryGrid({ images }: { images: string[] }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [index, setIndex] = useState(0);
+
+  // nawigacja klawiaturą w lightboxie
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsOpen(false);
+      if (e.key === 'ArrowRight') setIndex((i) => (i + 1) % images.length);
+      if (e.key === 'ArrowLeft') setIndex((i) => (i - 1 + images.length) % images.length);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [isOpen, images.length]);
+
+  return (
+    <>
+      {/* Siatka miniatur */}
+      <div className="grid md:grid-cols-3 gap-4 mt-8">
+        {images.map((src, i) => (
+          <button
+            key={i}
+            className="group aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-[#0E4C9A]"
+            onClick={() => { setIndex(i); setIsOpen(true); }}
+            aria-label={`Otwórz zdjęcie ${i + 1}`}
+          >
+            <img
+              src={src}
+              alt={`Portfolio ${i + 1}`}
+              loading="lazy"
+              className="w-full h-full object-cover group-hover:scale-105 transition"
+            />
+          </button>
+        ))}
+      </div>
+
+      {/* Lightbox */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center"
+          role="dialog"
+          aria-modal="true"
+        >
+          {/* Zamknij kliknięciem tła */}
+          <button
+            className="absolute inset-0 cursor-zoom-out"
+            aria-label="Zamknij podgląd"
+            onClick={() => setIsOpen(false)}
+          />
+
+          {/* Obraz */}
+          <div className="relative z-[101] max-w-6xl w-[92vw]">
+            <img
+              src={images[index]}
+              alt={`Podgląd ${index + 1}`}
+              className="w-full max-h-[78vh] object-contain rounded-xl shadow-2xl pointer-events-none select-none"
+            />
+
+            {/* Sterowanie */}
+            <div className="absolute inset-x-0 -bottom-14 flex items-center justify-between text-white">
+              <button
+                onClick={(e) => { e.stopPropagation(); setIndex((i) => (i - 1 + images.length) % images.length); }}
+                className="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur"
+                aria-label="Poprzednie"
+              >
+                ← Poprzednie
+              </button>
+              <span className="text-sm opacity-80">
+                {index + 1} / {images.length}
+              </span>
+              <button
+                onClick={(e) => { e.stopPropagation(); setIndex((i) => (i + 1) % images.length); }}
+                className="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur"
+                aria-label="Następne"
+              >
+                Następne →
+              </button>
+            </div>
+
+            {/* Zamknij (X) */}
+            <button
+              onClick={(e) => { e.stopPropagation(); setIsOpen(false); }}
+              className="absolute -top-12 right-0 text-white/90 hover:text-white text-base"
+              aria-label="Zamknij"
+            >
+              Zamknij ✕
+            </button>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+
+
