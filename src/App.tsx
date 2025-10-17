@@ -34,13 +34,13 @@ export default function FotoWazaHome() {
       <header className="sticky top-0 z-40 border-b bg-white">
         <nav className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
        <div className="flex items-center gap-3">
-  <img
-    src={`${import.meta.env.BASE_URL}waza-logo.png`}
-    alt="FotoWaza logo"
-    className="h-10 w-auto"
-    loading="lazy"
-    decoding="async"
-  />
+<img
+  src="logo-fotowaza.png"
+  alt="FotoWaza logo"
+  className="h-10 w-auto"
+  loading="lazy"
+  decoding="async"
+/>
 </div>
           <a href="#/" className="text-sm text-[#0E4C9A] hover:underline">← Wróć na stronę główną</a>
         </nav>
