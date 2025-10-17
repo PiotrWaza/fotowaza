@@ -35,7 +35,7 @@ export default function FotoWazaHome() {
         <nav className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
        <div className="flex items-center gap-3">
   <img
-    src={`${import.meta.env.BASE_URL}wazaKOLOR kopia.png`}
+    src={`${import.meta.env.BASE_URL}waza-logo.png`}
     alt="FotoWaza logo"
     className="h-10 w-auto"
     loading="lazy"
