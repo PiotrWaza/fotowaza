@@ -299,7 +299,7 @@ export default function FotoWazaHome() {
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
           <div>
             <h2 className="text-3xl font-bold">Wywołaj zdjęcia online</h2>
-            <p className="mt-3 text-neutral-700">Szybkie zamówienia przez internet – odbitki, fotoobrazy, kubki, kalendarze i więcej.</p>
+            <p className="mt-3 text-neutral-700">Szybkie zamówienia przez internet – odbitki, fotoobrazy, kubki, kalendarze i więcej. Możliwy odbiór osobisty lub wysyłka kurierem.</p>
             <a href="https://foto.fotowaza.pl" target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#0E4C9A] text-white font-semibold shadow hover:opacity-90">
               Przejdź do labu <ChevronRight className="h-4 w-4"/>
             </a>
