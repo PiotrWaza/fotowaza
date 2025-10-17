@@ -198,7 +198,7 @@ export default function FotoWazaHome() {
               <Sparkles className="h-4 w-4"/> 20+ lat doświadczenia
             </div>
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">Tworzymy niezapomniane <span className="text-[#0E4C9A]">historie</span> w kadrze</h1>
-            <p className="mt-4 text-lg text-neutral-700 max-w-xl">Rodzinna firma z Leszna – od 1990 roku łączymy tradycję z nowoczesnością. Sesje w studio i plenerze, film 4K, ujęcia z drona, fotobudka i ekspresowe wywoływanie zdjęć.</p>
+            <p className="mt-4 text-lg text-neutral-700 max-w-xl">Foto Waza to rodzinna firma z Leszna, która od 1990 roku łączy tradycję z nowoczesnością. Sesje w studio i plenerze, film 4K, ujęcia z drona, zdjęcia do dokumentów, fotobudka i ekspresowe wywoływanie zdjęć.</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a href="#portfolio" className="px-5 py-3 rounded-xl bg-[#0E4C9A] text-white font-semibold shadow hover:opacity-90">Zobacz portfolio</a>
               <a href="#zamowienia" className="px-5 py-3 rounded-xl bg-[#FFD400] text-[#0B0B0B] font-semibold shadow hover:translate-y-[-1px] transition">Wywołaj zdjęcia online</a>
