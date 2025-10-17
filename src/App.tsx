@@ -147,10 +147,15 @@ export default function FotoWazaHome() {
       {/* Pasek menu */}
       <header className={`sticky top-0 z-40 backdrop-blur border-b transition-colors ${scrolled ? "bg-[#0E3A6D]" : "bg-[#0E4C9A]"}`}>
         <nav className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between text-white">
-          <div className="flex items-center gap-3">
-            <img src={LOGO_DATA_URI} alt="FotoWaza logo" className="h-10 w-auto" />
-            <span className="font-semibold">FotoWaza</span>
-          </div>
+         <a href="#/" className="flex items-center gap-3">
+  <img
+    src="logo-fotowaza.png"
+    alt="FotoWaza"
+    className="h-10 w-auto"
+    loading="lazy"
+    decoding="async"
+  />
+</a>
           {/* Desktop menu */}
           <ul className="hidden md:flex gap-6 text-sm">
             <li><a href="#oferta" className="hover:text-[#FFD400]">Oferta</a></li>
@@ -451,8 +456,13 @@ export default function FotoWazaHome() {
       <footer className="border-t">
         <div className="max-w-6xl mx-auto px-4 py-8 text-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <img src={LOGO_DATA_URI} alt="FotoWaza logo" className="h-6 w-auto"/>
-            <span className="font-medium">FotoWaza</span>
+          <img
+  src="logo-fotowaza.png"
+  alt="FotoWaza"
+  className="h-8 w-auto"
+  loading="lazy"
+  decoding="async"
+/>
           </div>
           <p className="text-neutral-600">© {new Date().getFullYear()} FotoWaza. Wszelkie prawa zastrzeżone.</p>
           <a href="#/polityka-prywatnosci" className="text-[#0E4C9A] hover:underline">Polityka prywatności</a>
