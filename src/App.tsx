@@ -149,7 +149,7 @@ export default function FotoWazaHome() {
         <nav className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between text-white">
          <a href="#/" className="flex items-center gap-3">
   <img
-    src="logo-fotowaza.png"
+    src="waza-logo.png"
     alt="FotoWaza"
     className="h-10 w-auto"
     loading="lazy"
@@ -457,7 +457,7 @@ export default function FotoWazaHome() {
         <div className="max-w-6xl mx-auto px-4 py-8 text-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div className="flex items-center gap-2">
           <img
-  src="logo-fotowaza.png"
+  src="waza-logo.png"
   alt="FotoWaza"
   className="h-8 w-auto"
   loading="lazy"
